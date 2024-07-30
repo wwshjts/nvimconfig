@@ -24,5 +24,6 @@ opt.autoindent = true
 opt.smartindent = true
 
 -- [[ other ]] --
-opt.clipboard = "unnamedplus" -- use system clipboard
-vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]] -- no autocomments
+opt.clipboard = "unnamedplus"                           -- use system clipboard
+vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]    -- no autocomments
+opt.termguicolors = true                                -- use terminal colors in gui
