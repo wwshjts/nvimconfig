@@ -1,11 +1,14 @@
+require('./key_maps')
+
 local opt = vim.opt
 
 opt.compatible = false -- vi compatibility
 
+map_space_to_leader()
+
 -- [[ lines enumeration ]] --
 opt.number = true
 opt.relativenumber = true
-
 
 -- [[ search ]] --
 opt.ignorecase = true
@@ -22,6 +25,20 @@ opt.expandtab = true
 opt.smarttab = true
 opt.autoindent = true
 opt.smartindent = true
+
+-- [[ window splitting ]] --
+opt.splitright = true       -- spawn new window to the right
+nm("<C-s>", ":vsp<CR>")     -- open new window with same file
+nm("<C-n>", ":vnew<CR>")    -- open new window with empty file
+nm("<-l>", "<C-w>l")
+nm("<C-k>", "<C-w>k")
+nm("<C-j>", "<C-w>j")
+nm("<C-h>", "<C-w>h")
+nm("<C-o>", "<C-w>w")       -- move coursor to the next window
+nm("<C-p>", "<C-w>p")       -- move coursor to the last window
+
+-- [[ default explorer ]] --
+nm("<leader>e", ":Lex 20 <cr>") -- show default explorer
 
 -- [[ other ]] --
 opt.clipboard = "unnamedplus"                           -- use system clipboard
