@@ -1,4 +1,4 @@
-require('./key_maps')
+require('/base/key_maps')
 
 local opt = vim.opt
 
