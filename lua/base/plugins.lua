@@ -47,6 +47,23 @@ return packer.startup(function(use)
     -- [[ Colorshemes ]] --
     use "vague2k/vague.nvim"
     use "sainnhe/everforest"
+    use { "catppuccin/nvim", as = "catppuccin" }
+
+    -- [[ Completition setup ]] --
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+          use "L3MON4D3/LuaSnip", --snippet engine
+          use "rafamadriz/friendly-snippets", -- snippets for a test
+          use "saadparwaiz1/cmp_luasnip", -- snippet completions
+          use "hrsh7th/cmp-buffer", -- buffer completions
+          use "hrsh7th/cmp-path", -- path completions
+          use "hrsh7th/cmp-cmdline" -- cmdline completions
+      },
+      config = function()
+          require("base/cmp")
+      end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
