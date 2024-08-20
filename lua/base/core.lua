@@ -4,6 +4,8 @@ local opt = vim.opt
 
 opt.compatible = false -- vi compatibility
 
+-- leaded is key for user mappings,
+-- just override it if you prefer another button
 map_space_to_leader()
 
 -- [[ lines enumeration ]] --
@@ -30,7 +32,7 @@ opt.smartindent = true
 opt.splitright = true       -- spawn new window to the right
 nm("<C-s>", ":vsp<CR>")     -- open new window with same file
 nm("<C-n>", ":vnew<CR>")    -- open new window with empty file
-nm("<-l>", "<C-w>l")
+nm("<C-l>", "<C-w>l")
 nm("<C-k>", "<C-w>k")
 nm("<C-j>", "<C-w>j")
 nm("<C-h>", "<C-w>h")

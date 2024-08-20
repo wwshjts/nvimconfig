@@ -19,15 +19,17 @@ cmp.setup {
 
     mapping = {
 
-		-- Вызов меню автодополнения
+        -- show autocomplete menu
 		['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-		['<CR>'] = cmp.config.disable,                      -- Disable <Enter> confirmation
-		['<C-y>'] = cmp.mapping.confirm({ select = true }),
+		['<CR>'] = cmp.config.disable, -- disable enter confirmation
+		['<C-y>'] = cmp.mapping.confirm({ select = true }), -- new confirnation mapping
 
+        -- close autocomplete menu
 		['<C-e>'] = cmp.mapping({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
+
 		['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
 		['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
 	},

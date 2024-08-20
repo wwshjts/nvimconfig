@@ -1,6 +1,10 @@
 local map = vim.api.nvim_set_keymap 
 
-local options = { noremap = true, silent = true } -- if command already exists, then override it
+--[[
+    noremap: if command already exists, then override it
+    silent: command messages will not be given or added to the message history.
+--]]
+local options = { noremap = true, silent = true }
 
 function nm(key, command)
     map('n', key, command, options)
