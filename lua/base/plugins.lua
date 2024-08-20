@@ -6,8 +6,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     PACKER_BOOTSTRAP = fn.system {
         "git",
         "clone",
-        "--depth",
-        "1",
+        "--depth", "1",
         "https://github.com/wbthomason/packer.nvim",
         install_path,
     }
@@ -89,6 +88,13 @@ return packer.startup(function(use)
         run = ':TSUpdate',
         config = function() require("base/config/treesitter") end,
     }
+
+    -- [[ Telescope ]] --
+    use {
+        "nvim-telescope/telescope.nvim", tag = '0.1.8',
+        config = function() require("base/config/telescope") end,
+    }
+
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
