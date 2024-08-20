@@ -61,7 +61,7 @@ return packer.startup(function(use)
           use "hrsh7th/cmp-cmdline" -- cmdline completions
       },
       config = function()
-          require("base/cmp")
+          require("base/config/cmp")
       end
     }
 
