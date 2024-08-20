@@ -73,6 +73,14 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"
 
     use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v4.x',
+        config = function()
+            require("base/config/lsp_zero")
+        end
+    }
+
+    use {
         "williamboman/mason.nvim",
         requires = {
             use "williamboman/mason-lspconfig.nvim"
@@ -81,14 +89,6 @@ return packer.startup(function(use)
             require("base/config/mason")
         end,
     }
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v4.x',
-        config = function()
-            require("base/config/lsp_zero")
-        end
-    }
-
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

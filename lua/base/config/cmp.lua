@@ -10,15 +10,10 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load() -- TODO add it to packer
 
-local check_backspace = function()
-    local col = vim.fn.col "." - 1
-    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-end
-
 cmp.setup {
     snippet = {
         expand = function(args)
-            luasnip.lsp_expand(args.body) 
+            luasnip.lsp_expand(args.body)
         end,
     },
 
