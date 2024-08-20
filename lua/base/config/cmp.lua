@@ -38,9 +38,13 @@ cmp.setup {
 	},
 
     sources = cmp.config.sources({
-		{ name = 'luasnip' }, 
-		{ name = 'buffer' },
-		{ name = 'path' },
+		{ name = 'luasnip' },       -- snippet engine
+		{ name = 'buffer' },        -- buffer completition 
+		{ name = 'path' },          -- path completition
+        { name = 'nvim_lua' },      -- lua api completition
+
+        { name = 'nvim_lsp' },      -- lsp completition 
+        { name = 'nvim_lsp_signature_help' },
 	}, {
 	}),
 }
