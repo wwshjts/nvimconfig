@@ -83,6 +83,13 @@ return packer.startup(function(use)
 
     use { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' }
 
+    -- [[ Treesitter ]] --
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+        config = function() require("base/config/treesitter") end,
+    }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
