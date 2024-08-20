@@ -24,8 +24,7 @@ vim.cmd [[
 ]]
 
 local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
+if not status_ok then return
 end
 
 -- [[ Packer window ]] --
@@ -70,25 +69,18 @@ return packer.startup(function(use)
     }
 
     -- [[ LSP ]] --
-    use "neovim/nvim-lspconfig"
-
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v4.x',
-        config = function()
-            require("base/config/lsp_zero")
-        end
-    }
-
     use {
         "williamboman/mason.nvim",
         requires = {
             use "williamboman/mason-lspconfig.nvim"
         },
-        config = function()
-            require("base/config/mason")
-        end,
+        config = function() require("base/config/mason") end,
     }
+
+    use "neovim/nvim-lspconfig"
+
+    use { 'VonHeikemen/lsp-zero.nvim', branch = 'v4.x' }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

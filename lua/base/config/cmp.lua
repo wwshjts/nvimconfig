@@ -8,7 +8,7 @@ if not snip_status_ok then
     return
 end
 
-require("luasnip/loaders/from_vscode").lazy_load() -- TODO add it to packer
+require("luasnip/loaders/from_vscode").lazy_load()
 
 cmp.setup {
     snippet = {
