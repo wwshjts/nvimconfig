@@ -13,9 +13,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     print "Installing packer close and reopen Neovim..."
     vim.cmd [[packadd packer.nvim]]
 end
-
--- enable if you want to sync Packer after editing this file
---[[
+-- enable if you want to sync Packer after editing this file [[
 vim.cmd [[
     augroup packer_user_config
         autocmd!
@@ -93,6 +91,13 @@ return packer.startup(function(use)
     use {
         "nvim-telescope/telescope.nvim", tag = '0.1.8',
         config = function() require("base/config/telescope") end,
+    }
+
+    -- [[ Metals ]] --
+    -- Plugin for scala development
+    use {
+        "scalameta/nvim-metals",
+        config = function() require("base/config/metals") end,
     }
 
 

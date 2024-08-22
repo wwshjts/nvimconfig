@@ -15,6 +15,8 @@
 - [x] treesitter
 - [x] telescope
 - [ ] metals
+    - [ ] fidget for notifications and status bar 
+    - [ ] setup telescope to run metals commands
 - [x] config base filemanager
 - [ ] obsidian
 - [ ] latex
