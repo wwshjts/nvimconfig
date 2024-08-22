@@ -1,4 +1,11 @@
-require('telescope').setup {}
+require('telescope').setup {
+    defaults = {
+        layout_config = {
+            preview_cutoff = 40, -- when columns are less than this value, the preview will be disabled
+        },
+
+    },
+}
 
 
 local builtin = require('telescope.builtin')

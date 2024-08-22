@@ -18,4 +18,5 @@
 - [ ] config base filemanager
 - [ ] obsidian
 - [ ] latex
+- [ ] built-in terminal
 
