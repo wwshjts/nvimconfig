@@ -39,8 +39,15 @@ nm("<C-h>", "<C-w>h")
 nm("<C-o>", "<C-w>w")       -- move coursor to the next window
 nm("<C-p>", "<C-w>p")       -- move coursor to the last window
 
+-- [[ work with buffers ]] --
+nm("<leader>bsp", ":vertical sbp<CR>")
+nm("<leader>bsn", ":vertical sbn<CR>")
+nm("<leader>bp", ":bp <CR>")
+nm("<leader>bn", ":bp <CR>")
+nm("<leader>p", ":e # <CR>")
+
 -- [[ default explorer ]] --
-nm("<leader>e", ":Lex 20 <cr>") -- show default explorer
+nm("<leader>e", ":Lex 20 <CR>") -- show default explorer
 
 -- [[ other ]] --
 opt.clipboard = "unnamedplus"                           -- use system clipboard

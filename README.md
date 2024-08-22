@@ -15,6 +15,7 @@
 - [x] treesitter
 - [ ] telescope
 - [ ] metals
+- [ ] config base filemanager
 - [ ] obsidian
 - [ ] latex
 
