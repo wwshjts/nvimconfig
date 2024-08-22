@@ -32,7 +32,7 @@ opt.smartindent = true
 opt.splitright = true       -- spawn new window to the right
 nm("<C-s>", ":vsp<CR>")     -- open new window with same file
 nm("<C-n>", ":vnew<CR>")    -- open new window with empty file
-nm("<C-l>", "<C-w>l")
+nm("<C-l>", "<C-w>l")       -- TODO debug this command
 nm("<C-k>", "<C-w>k")
 nm("<C-j>", "<C-w>j")
 nm("<C-h>", "<C-w>h")
@@ -48,6 +48,8 @@ nm("<leader>p", ":e # <CR>")
 
 -- [[ default explorer ]] --
 nm("<leader>e", ":Lex 20 <CR>") -- show default explorer
+vim.g.netrw_banner = 0          -- hide default banner
+vim.g.netrw_liststyle = 3       -- show directories view as tree
 
 -- [[ other ]] --
 opt.clipboard = "unnamedplus"                           -- use system clipboard

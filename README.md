@@ -13,10 +13,12 @@
 # TODO
 
 - [x] treesitter
-- [ ] telescope
+- [x] telescope
 - [ ] metals
-- [ ] config base filemanager
+- [x] config base filemanager
 - [ ] obsidian
 - [ ] latex
 - [ ] built-in terminal
 
+# BUGS
+- <C-l> keymap doesnt work
