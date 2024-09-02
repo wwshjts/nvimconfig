@@ -6,11 +6,12 @@ if not has_servers then
 end
 
 local lsp = require("lsp-zero")
+local keymaps = require("base/lsp/keymaps")
 
 -- lsp_attach is where you enable features that only work
 -- if there is a language server active in the file
 local lsp_attach = function(client, bufnr)
-    lsp.default_keymaps({buffer = bufnr})
+    keymaps.my_keymaps({buffer = bufnr})
 end
 
 -- should be executed before any lsp setup

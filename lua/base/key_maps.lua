@@ -1,3 +1,4 @@
+-- TODO rework this file to module and merge it with lsp keymaps 
 local map = vim.api.nvim_set_keymap 
 
 --[[

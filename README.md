@@ -16,11 +16,17 @@
 - [x] telescope
 - [ ] metals
     - [ ] fidget for notifications and status bar 
-    - [ ] setup telescope to run metals commands
-- [x] config base filemanager
+    - [x] setup telescope to run metals commands
+    - [x] make configure lsp keymaps for metals
+- [x] config base file explorer
+- [ ] add not built-in file explorer?
 - [ ] obsidian
 - [ ] latex
+- [ ] merge keymap config for metals and other lsp
+- [ ] add [debugger](https://github.com/mfussenegger/nvim-dap)support
+    - [ ] integrate it with metals
 - [ ] built-in terminal
 
 # BUGS
-- <C-l> keymap doesnt work
+
+- <C-l> keymap doesnt work with built-in filemanager
