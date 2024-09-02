@@ -100,6 +100,12 @@ return packer.startup(function(use)
         config = function() require("base/config/metals") end,
     }
 
+    -- [[ Obsidian ]] --
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
+
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

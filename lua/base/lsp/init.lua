@@ -33,7 +33,6 @@ require("mason-lspconfig").setup {
         end,
 
         texlab = function ()
-            print("hello")
             require('lspconfig').texlab.setup({
                 filetypes = {"tex", "markdown"},
             })
