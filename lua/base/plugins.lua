@@ -25,7 +25,6 @@ vim.cmd [[
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then return
 end
-
 -- [[ Packer window ]] --
 packer.init {
     display = {
@@ -111,6 +110,15 @@ return packer.startup(function(use)
     use {
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
+    }
+
+    -- [[ File explorer ]] --
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function () require("base.config.nvim-tree") end
     }
 
 

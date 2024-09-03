@@ -47,9 +47,9 @@ nm("<leader>bn", ":bp <CR>")
 nm("<leader>p", ":e # <CR>")
 
 -- [[ default explorer ]] --
-nm("<leader>e", ":Lex 20 <CR>") -- show default explorer
-vim.g.netrw_banner = 0          -- hide default banner
-vim.g.netrw_liststyle = 3       -- show directories view as tree
+-- disable default explorer
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- [[ other ]] --
 opt.clipboard = "unnamedplus"                           -- use system clipboard
