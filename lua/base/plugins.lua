@@ -101,10 +101,17 @@ return packer.startup(function(use)
     }
 
     -- [[ Obsidian ]] --
-    use({
+   use {
+        "epwalsh/obsidian.nvim",
+        tag = "*",  -- recommended, use latest release instead of latest commit
+        config = function() require("base.config.obs") end,
+   }
+
+
+    use {
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
-    })
+    }
 
 
     if PACKER_BOOTSTRAP then
