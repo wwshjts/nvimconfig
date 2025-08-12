@@ -36,6 +36,10 @@ require("mason-lspconfig").setup {
             require('lspconfig').texlab.setup({
                 filetypes = {"tex", "markdown"},
             })
+        end,
+
+        ocamllsp = function ()
+          require('lspconfig').ocamllsp.setup({})
         end
     }
 }
